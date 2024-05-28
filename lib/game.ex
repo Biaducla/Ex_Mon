@@ -29,5 +29,5 @@ defmodule ExMon.Game do
   end
 
   defp update_turn(%{turn: :player} = state), do: Map.put(state, :turn, :computer)
-  defp update_turn(%{turn: :computer} = state), do: Map.put(state, :turn, :computer)
+  defp update_turn(%{turn: :computer} = state), do: Map.put(state, :turn, :player)
 end

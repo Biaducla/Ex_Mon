@@ -1,5 +1,4 @@
 defmodule ExMon.Game.Status do
-  alias ExMon.Game
 
   def print_round_message(%{status: :started} = info) do
     IO.puts("\n======= The game is staterd! =======\n")
@@ -31,7 +30,7 @@ defmodule ExMon.Game.Status do
     IO.puts("\n====== The computer attacked the player dealing #{damage} damage. =====\n")
   end
 
-  def print_move_message(:player, :heal, damage) do
-    IO.puts("\n====== The computer attacked the player dealing #{damage} damage. =====\n")
+  def print_move_message(player, :heal, life) do
+    IO.puts("\n====== The #{player} healled itself to #{life} life points. =====\n")
   end
 end
